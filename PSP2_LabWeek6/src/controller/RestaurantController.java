@@ -43,7 +43,8 @@ public class RestaurantController {
 			File menuFile = new File("H:\\restaurant\\menu.txt");
 			if(!menuFile.exists())
 			{
-				menuFile.createNewFile();
+				//If the file doesn't exist we have nothing to process so we return
+				return;
 			}
 			//Create the FileReader and wrap it around the File object
 			FileReader menuReader = new FileReader(menuFile);
